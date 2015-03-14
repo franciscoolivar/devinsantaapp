@@ -1,15 +1,18 @@
 <html>
   <body>
     <?php
-    if (array_key_exists('content', $_POST)) {
-      echo "You wrote:<pre>\n";
-      echo htmlspecialchars($_POST['content']);
-      echo "\n</pre>";
-    }
-    ?>
-    <form action="/sign" method="post">
-      <div><textarea name="content" rows="3" cols="60"></textarea></div>
-      <div><input type="submit" value="Sign Guestbook"></div>
-    </form>
+      $conecta = mysql_connect('mysql23283-devinsanta.jelastic.websolute.net.br', 'root', '4BcxHqxut1') or print (mysql_error()); 
+      mysql_select_db("devinsantaapp", $conecta) or print(mysql_error()); 
+      $sql = "SELECT * FROM usuario"; 
+      $result = mysql_query($sql, $conecta); 
+ 
+ 
+     while($consulta = mysql_fetch_array($result)) { 
+       print "Coluna1: $consulta[coluna1] - Coluna2: $consulta[coluna2]<br>"; 
+      } 
+     mysql_free_result($result);   
+     mysql_close($conecta); 
+
+   ?>
   </body>
 </html>
