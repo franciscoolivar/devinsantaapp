@@ -8,7 +8,7 @@
       $result = mysql_query($sql, $conecta); 
  
       while($consulta = mysql_fetch_array($result)) { 
-       print "Coluna1: $consulta[Nome] - Coluna2: $consulta[Nick]<br>"; 
+       print "Coluna1: $consulta[Name] - Coluna2: $consulta[Nick]<br>"; 
       } 
      mysql_free_result($result);   
      mysql_close($conecta); 
