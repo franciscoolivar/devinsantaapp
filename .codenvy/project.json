@@ -1,1 +1,1 @@
-{"mixinTypes":[],"runners":{"configs":{}},"builders":{"configs":{}},"description":"Sistema em PHP com BigData","type":"GAEPhp","attributes":{"language":["php"]}}
+{"mixinTypes":["contribution"],"runners":{"configs":{"system:/php/web/php56_apache2":{"ram":0,"variables":{},"options":{}}},"default":"system:/php/web/php56_apache2"},"builders":{"configs":{}},"description":"Sistema em PHP com BigData","type":"php","attributes":{"language":["php"],"contribute_branch":["master"],"contribute_mode":["contribute"]}}
